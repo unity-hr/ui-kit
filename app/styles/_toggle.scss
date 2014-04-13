@@ -1,12 +1,6 @@
 .toggle {
-  position: absolute;
-  z-index: 10;
-  top: $suh;
-  right: $suh;
-  min-width: 100px;
   padding: $suh $sub;
   border-bottom: none;
-  text-align: center;
 
   &:hover,
   &:focus {
