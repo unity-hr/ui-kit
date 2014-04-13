@@ -125,7 +125,7 @@ gulp.task('wiredep', function () {
 });
 
 // Watch
-gulp.task('watch', ['clean', 'connect', 'serve'], function () {
+gulp.task('watch', ['connect', 'serve'], function () {
   var server = $.livereload();
 
   // Watch for changes in `app` and `.tmp` folder
