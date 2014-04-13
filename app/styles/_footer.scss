@@ -1,0 +1,14 @@
+footer {
+  position: absolute;
+  padding: $sub;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  a {
+    margin-left: $suh/2;
+    margin-right: $suh/2;
+    font-weight: 700;
+  }
+}

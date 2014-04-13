@@ -1,0 +1,13 @@
+.social {
+}
+
+  @each $network in twitter, dribbble, behance {
+    .social-#{$network} {
+      &:hover,
+      &:focus {
+        $color: map-get($network-colors, $network);
+        border-bottom-color: $color;
+        color: $color;
+      }
+    }
+  }

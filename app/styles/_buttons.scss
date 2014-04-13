@@ -1,0 +1,34 @@
+.btn {
+  transition: all .2s;
+  display: inline-block;
+  margin: 0;
+  padding: $suh $sub;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: "roboto", $helvetica;
+  font-weight: 400;
+  line-height: inherit;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}
+
+  .btn-lg {
+    @include font-size(26px);
+    padding: $suh * 1.25 $sub * 1.25;
+  }
+
+  .btn-primary {
+    background-color: $btn-primary-bg;
+    color: $btn-primary-color;
+
+    &:hover,
+    &:focus {
+      background-color: $btn-primary-color;
+      color: #fff;
+    }
+  }

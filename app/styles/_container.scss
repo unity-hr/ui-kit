@@ -1,0 +1,33 @@
+main {
+  position: relative;
+  height: 100%;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    margin-left: -0.25em;
+  }
+
+  .container {
+    display: inline-block;
+    vertical-align: middle;
+
+    .tm {
+      top: -0.75em;
+      font-weight: 500;
+      font-size: 44px;
+    }
+
+    p {
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      margin-top: $sub * 1.5;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url(../images/ui-kit.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: #fff;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: 500;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ol, ul, {
+  margin-top: 0;
+  margin-bottom: $sub;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1.1;
+}
+
+a {
+  display: inline-block;
+  transition: all .2s;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+}

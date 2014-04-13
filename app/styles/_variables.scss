@@ -1,0 +1,31 @@
+$font-family-base: "Neue Haas Grotesk W01 Disp", $helvetica;
+
+$font-size-base: 20px;
+$line-height-computed: 28px;
+$line-height-base: $line-height-computed / $font-size-base;
+
+$sub: $line-height-computed;
+$suh: $line-height-computed / 2;
+
+$color-primary: #f8db84;
+
+$network-colors: (
+  facebook:    #3b5998,
+  twitter:     #00aced,
+  google-plus: #da2713,
+  vimeo:       #1bb7ea,
+  youtube:     #e14d40,
+  github:      #000000,
+  gmail:       #d72c2c,
+  linked-in:   #0274b3,
+  instagram:   #2c6e8e,
+  vine:        #00a478,
+  dribbble:    #df4c85,
+  behance:     #000000,
+  flickr-blue: #1e65d9,
+  flickr-pink: #fc1486,
+  soundcloud:  #ff631c
+);
+
+$btn-primary-bg: $color-primary;
+$btn-primary-color: #41557d;

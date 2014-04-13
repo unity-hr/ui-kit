@@ -1,0 +1,55 @@
+.toggle {
+  position: absolute;
+  z-index: 10;
+  top: $suh;
+  right: $suh;
+  min-width: 100px;
+  padding: $suh $sub;
+  border-bottom: none;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    color: #fff;
+  }
+
+  &::before {
+    content: "Check it out"
+  }
+}
+
+.overlay,
+.container,
+footer {
+  transition-duration: .5s;
+}
+
+.overlay,
+footer {
+  transition-property: bottom;
+  bottom: 0%;
+}
+
+.container {
+  transition-property: opacity;
+  opacity: 1;
+}
+
+.is-revealed {
+  .toggle {
+    &::before {
+      content: "Close"
+    }
+  }
+
+  .overlay,
+  footer {
+    bottom: calc(100% - #{$sub * 3});
+  }
+
+  .container {
+    opacity: 0;
+  }
+}
