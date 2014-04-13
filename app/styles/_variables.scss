@@ -1,7 +1,7 @@
 $font-family-base: "Neue Haas Grotesk W01 Disp", $helvetica;
 
-$font-size-base: 20px;
-$line-height-computed: 28px;
+$font-size-base: 16px;
+$line-height-computed: 24px;
 $line-height-base: $line-height-computed / $font-size-base;
 
 $sub: $line-height-computed;
@@ -29,3 +29,15 @@ $network-colors: (
 
 $btn-primary-bg: $color-primary;
 $btn-primary-color: #41557d;
+
+// Small screen / tablet
+$screen-sm-min:              768px !default;
+// Medium screen / desktop
+$screen-md-min:              992px;
+// Large screen / wide desktop
+$screen-lg-min:              1200px;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;

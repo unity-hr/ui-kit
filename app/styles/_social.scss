@@ -1,6 +1,14 @@
 .social {
 }
 
+  .social-follow-us {
+    display: none;
+
+    @media (min-width: $screen-sm-min) {
+      display: inline;
+    }
+  }
+
   @each $network in twitter, dribbble, behance {
     .social-#{$network} {
       &:hover,
