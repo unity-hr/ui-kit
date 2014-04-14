@@ -1,13 +1,15 @@
 jQuery ($) ->
 
-  body      = $('body')
-  html      = $('html')
-  bh        = body.add(html)
-  $window   = $(window)
-  overlay   = $('.overlay')
-  footer    = $('footer')
-  toggleTop = $('.toggle[data-to="top"]')
+  body        = $('body')
+  bodyNoTouch = $('.no-touch body')
+  html        = $('html')
+  bh          = body.add(html)
+  win         = $(window)
+  overlay     = $('.overlay')
+  footer      = $('footer')
+  toggleTop   = $('.toggle[data-to="top"]')
 
+  overlay.height(window.innerHeight)
   body.height(body.height() * 2 - footer.outerHeight())
 
   $('.toggle').on 'click touchstart', (event) ->
@@ -17,11 +19,11 @@ jQuery ($) ->
     else
       bh.animate({scrollTop: 0}, 500)
 
-  $window.on 'scroll', ->
-    currentPos = $window.scrollTop()
+  win.on 'scroll', ->
+    currentPos = win.scrollTop()
     offset     = 20
 
-    body.css
+    bodyNoTouch.css
       backgroundPosition: "50% #{(currentPos/html.height()) * 100}%"
 
     if (currentPos >= footer.offset().top - offset)
