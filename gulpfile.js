@@ -17,7 +17,7 @@ gulp.task('styles', function () {
     .pipe($.rubySass({
       style: 'expanded'
     }))
-    .pipe($.autoprefixer('last 1 version'))
+    .pipe($.autoprefixer('last 3 versions'))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe($.size());
 });
