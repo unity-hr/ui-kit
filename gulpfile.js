@@ -77,7 +77,7 @@ gulp.task('fonts', function () {
 
 // Clean
 gulp.task('clean', function () {
-  return gulp.src(['.tmp', 'dist/styles', 'dist/scripts', 'dist/images', 'dist/fonts'], { read: false }).pipe($.clean());
+  return gulp.src(['.tmp', 'dist'], { read: false }).pipe($.clean());
 });
 
 // Build
