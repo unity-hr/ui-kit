@@ -1,0 +1,44 @@
+.share {
+  display: inline-block;
+  margin-top: $suh;
+
+  @media (min-width: $screen-sm-min) {
+    position: absolute;
+    top: $suh;
+    left: $sub;
+  }
+
+  a {
+    border-bottom: none;
+  }
+
+  .fa-inverse {
+    transition: color .2s;
+    color: $color-blue;
+  }
+}
+
+  .share-label {
+    display: inline-block;
+
+    @media (min-width: $screen-sm-min) {
+      margin-right: $suh;
+    }
+
+    @media (min-width: $screen-md-min) {
+      margin-right: $suh;
+    }
+  }
+
+  @each $network in facebook, twitter {
+    .share-#{$network} {
+      &:hover,
+      &:focus {
+        color: map-get($network-colors, $network);
+
+        .fa-inverse {
+          color: #fff;
+        }
+      }
+    }
+  }

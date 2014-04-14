@@ -1,7 +1,6 @@
 main {
-  padding: $sub 0;
-  position: relative;
   height: 100%;
+  padding: $sub 0;
 
   &::before {
     content: "";

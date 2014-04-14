@@ -1,7 +1,12 @@
 .social {
+  a {
+    margin-left: $suh/2;
+    margin-right: $suh/2;
+    font-weight: 700;
+  }
 }
 
-  .social-follow-us {
+  .social-label {
     display: none;
 
     @media (min-width: $screen-sm-min) {

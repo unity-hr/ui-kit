@@ -2,48 +2,21 @@
   padding: $suh $sub;
   border-bottom: none;
 
-  &:hover,
-  &:focus {
-    box-shadow: none;
-    outline: none;
-    color: #fff;
-  }
-
-  &::before {
-    content: "Check it out"
-  }
-}
-
-.overlay,
-.container,
-footer {
-  transition-duration: .5s;
-}
-
-.overlay,
-footer {
-  transition-property: bottom;
-  bottom: 0%;
-}
-
-.container {
-  transition-property: opacity;
-  opacity: 1;
-}
-
-.is-revealed {
-  .toggle {
-    &::before {
-      content: "Close"
-    }
-  }
-
-  .overlay,
-  footer {
-    bottom: calc(100% - #{$sub * 3});
-  }
-
-  .container {
+  &[data-to="top"] {
+    display: inline-block;
+    transition: opacity .5s;
+    pointer-events: none;
     opacity: 0;
+
+    @media (min-width: $screen-sm-min) {
+      position: absolute;
+      top: $suh;
+      right: $sub;
+    }
+
+    &.is-visible {
+      pointer-events: auto;
+      opacity: 1;
+    }
   }
 }

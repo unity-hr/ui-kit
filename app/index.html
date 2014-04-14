@@ -10,6 +10,7 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
     <!-- endbower -->
 
     <link rel="stylesheet" href="styles/main.css">
@@ -41,40 +42,56 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="preview">
-    </div>
-
     <div class="overlay">
-    </div>
+      <main role="main">
+        <div class="container">
+          <h1>Oh no, not another <br>UI Kit<sup class="tm">™</sup></h1>
 
-    <main role="main">
+          <p>A <strong>simple</strong>, <strong>flat</strong> and <strong>free mobile and web UI Kit</strong> available as a <strong>free PSD</strong> download under <a href="http://opensource.org/licenses/MIT"><strong>MIT licence</strong></a>.</p>
 
-      <div class="container">
-        <h1>Oh no, not another <br>UI Kit<sup class="tm">™</sup></h1>
+          <div class="btn-container">
+            <a href="#" class="btn btn-lg btn-primary">Download</a>
+          </div>
 
-        <p>A <strong>simple</strong>, <strong>flat</strong> and <strong>free mobile and web UI Kit</strong> available as a <strong>free PSD</strong> download under <a href="http://opensource.org/licenses/MIT"><strong>MIT licence</strong></a>.</p>
+          <p><a href="#" class="toggle" data-to="bottom">Check it out</a></p>
+        </div>
+      </main>
 
-        <div class="btn-container">
-          <a href="#" class="btn btn-lg btn-primary">Download</a>
+      <footer role="contentinfo">
+        <div class="social">
+          <span class="social-label">Follow us on</span>
+          <a class="social-twitter" href="#">Twitter</a>
+          <a class="social-dribbble" href="#">Dribbble</a>
+          <a class="social-behance" href="#">Bēhance</a>
         </div>
 
-        <p><a href="#" class="toggle"></a></p>
-      </div>
-    </main>
+        <div class="share">
+          <span class="share-label">Share</span>
+          <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[title]=UI+Kit&p[summary]=A+simple,+flat+and+free+mobile+and+web+UI+Kit+available+as+a+free+PSD+download+under+MIT+licence.&p[url]=http%3A%2F%2Funity.hr%2Fui-kit&p[images][0]=http%3A%2F%2Funity.hr%2Fui-kit%2Fimages%2Fui-kit.png" class="share-facebook" target="_blank">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
 
-    <footer role="contentinfo">
-      <span class="social-follow-us">Follow us on</span>
-      <a class="social-twitter" href="#">Twitter</a>
-      <a class="social-dribbble" href="#">Dribbble</a>
-      <a class="social-behance" href="#">Bēhance</a>
-    </footer>
+          <a href="https://twitter.com/share?url=http%3A%2F%2Funity.hr%2Fui-kit&text=A+free+UI+Kit!&via=unity_hr&hashtags=freebie,ui" class="share-twitter twitter-share-button" target="_blank">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+        </div>
 
-    <!-- build:js({.tmp,app}) scripts/main.js -->
+        <a href="#" class="toggle" data-to="top">Close</a>
+      </footer>
+    </div>
+
+    <!-- build:js scripts/main.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
 
-    <script src="scripts/toggle.js"></script>
+    <script src="scripts/parallax.js"></script>
     <!-- endbuild -->
   </body>
 </html>
