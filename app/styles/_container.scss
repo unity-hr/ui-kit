@@ -1,13 +1,18 @@
 main {
-  height: 100%;
   padding: $sub 0;
 
-  &::before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
+  @media (min-height: 480px) {
     height: 100%;
-    margin-left: -0.25em;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+      margin-left: -0.25em;
+    }
   }
 
   .container {

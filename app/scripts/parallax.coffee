@@ -9,8 +9,11 @@ jQuery ($) ->
   footer      = $('footer')
   toggleTop   = $('.toggle[data-to="top"]')
 
-  overlay.height(window.innerHeight)
-  body.height(body.height() * 2 - footer.outerHeight())
+  if window.innerHeight >= 480
+    overlay.height(window.innerHeight)
+    body.height(body.height() * 2 - footer.outerHeight())
+  else
+    body.height(overlay.height() * 2 - footer.outerHeight())
 
   $('.toggle').on 'click touchstart', (event) ->
     event.preventDefault()

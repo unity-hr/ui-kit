@@ -3,12 +3,13 @@
   border-bottom: none;
 
   &[data-to="top"] {
-    display: inline-block;
+    display: none;
     transition: opacity .5s;
     pointer-events: none;
     opacity: 0;
 
     @media (min-width: $screen-sm-min) {
+      display: inline-block;
       position: absolute;
       top: $suh;
       right: $sub;
@@ -20,3 +21,9 @@
     }
   }
 }
+
+  .toggle-container {
+    @media (min-height: 480px) {
+      margin-bottom: $sub;
+    }
+  }

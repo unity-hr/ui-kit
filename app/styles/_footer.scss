@@ -1,10 +1,14 @@
 footer {
-  position: absolute;
+  position: relative;
   padding: $suh;
-  bottom: 0;
-  left: 0;
-  right: 0;
   text-align: center;
+
+  @media (min-height: 480px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
   @media (min-width: $screen-sm-min) {
     padding: $sub;

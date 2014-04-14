@@ -1,4 +1,7 @@
 .overlay {
-  height: 100%;
   background-color: rgba($color-blue, .9);
+
+  @media (min-height: 480px) {
+    height: 100%;
+  }
 }
