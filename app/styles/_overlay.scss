@@ -1,4 +1,5 @@
 .overlay {
+  position: relative;
   background-color: rgba($color-blue, .9);
 
   @media (min-height: 480px) {

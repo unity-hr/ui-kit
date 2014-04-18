@@ -37,6 +37,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
 
   return gulp.src('app/*.html')
     .pipe($.useref.assets())
+    .pipe($.rev())
     .pipe(jsFilter)
     .pipe($.uglify())
     .pipe(jsFilter.restore())

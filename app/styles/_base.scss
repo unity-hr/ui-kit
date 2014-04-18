@@ -9,7 +9,7 @@ html, body {
 
 body {
   @include font-size($font-size-base);
-  background-image: url(../images/ui-kit.png);
+  background-image: url(../images/ui-kit.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,6 +25,7 @@ body {
 
   @media (min-width: $screen-md-min) {
     @include font-size(20px, 1.5);
+    background-size: auto auto;
   }
 }
 
@@ -60,6 +61,14 @@ h1 {
     sup {
       top: -0.75em;
       font-size: 44px;
+    }
+  }
+
+  @media (max-height: 520px) and (min-width: $screen-md-min) {
+    @include font-size(60px, 3);
+
+    sup {
+      top: -0.5em;
     }
   }
 }

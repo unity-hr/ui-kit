@@ -6,14 +6,32 @@ jQuery ($) ->
   bh          = body.add(html)
   win         = $(window)
   overlay     = $('.overlay')
+  main        = $('main')
   footer      = $('footer')
   toggleTop   = $('.toggle[data-to="top"]')
 
-  if window.innerHeight >= 480
-    overlay.height(window.innerHeight)
-    body.height(body.height() * 2 - footer.outerHeight())
-  else
-    body.height(overlay.height() * 2 - footer.outerHeight())
+  scrollUpdate = ->
+    currentPos = win.scrollTop()
+    offset     = 20
+
+    bodyNoTouch.css
+      backgroundPosition: "50% #{(currentPos/body.height()) * 100}%"
+
+    if (currentPos >= footer.offset().top - offset)
+      toggleTop.addClass('is-visible')
+    else
+      toggleTop.removeClass('is-visible')
+
+  resizeUpdate = ->
+    if window.innerHeight >= 480
+      overlay.height(window.innerHeight)
+    else
+      overlay.height('auto')
+
+    body.height(overlay.height() + window.innerHeight - footer.outerHeight())
+
+  scrollUpdate()
+  resizeUpdate()
 
   $('.toggle').on 'click touchstart', (event) ->
     event.preventDefault()
@@ -22,14 +40,5 @@ jQuery ($) ->
     else
       bh.animate({scrollTop: 0}, 500)
 
-  win.on 'scroll', ->
-    currentPos = win.scrollTop()
-    offset     = 20
-
-    bodyNoTouch.css
-      backgroundPosition: "50% #{(currentPos/html.height()) * 100}%"
-
-    if (currentPos >= footer.offset().top - offset)
-      toggleTop.addClass('is-visible')
-    else
-      toggleTop.removeClass('is-visible')
+  win.on('scroll', scrollUpdate)
+  win.on('resize', resizeUpdate)
